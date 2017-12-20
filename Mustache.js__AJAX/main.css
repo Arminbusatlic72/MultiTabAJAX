@@ -1,0 +1,22 @@
+.boxingRow {
+  display: none;
+
+}
+.footer {
+  position: relative;
+}
+#back-to-top {
+  border: 1px solid black;
+  height: 40px;
+  width: 40px;
+  text-align: center;
+  line-height: 38px;
+  cursor: pointer;
+  right: 50px;
+  margin-bottom: 50px;
+  position: absolute;
+  z-index: 99;
+}
+#back-to-top:hover {
+  background-color: gray;
+}

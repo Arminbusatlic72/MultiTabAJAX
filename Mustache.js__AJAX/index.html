@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+  <div class="jumbotron">
+    <div class="nav navbar-inverse">
+      <div class="container-fluid">
+        <a href="index.html" class="navbar-brand">AJAX</a>
+        <ul class="nav navbar-nav">
+          <li><a href="http://mysafeinfo.com/api/data?list=bestnovels&format=json" class="navLinks">Books</a></li>
+          <li><a href="http://mysafeinfo.com/api/data?list=heavyweightchamps&format=json" class="navLinks">Boxing</a></li>
+          <li><a href="http://mysafeinfo.com/api/data?list=nbafinals&format=json" class="navLinks">NBA</a></li>
+          <li><a href="http://mysafeinfo.com/api/data?list=eufachampionteams&format=json" class="navLinks">UEFA<br>Champion<br>Teams</a></li>
+          <li><a href="http://mysafeinfo.com/api/data?list=rockrollinductees&format=json" class="navLinks">Rock n' Roll Hall OF Fame</a></li>
+          <li><a href="http://mysafeinfo.com/api/data?list=top100rocksongs_billboard_2013&format=json" class="navLinks">Top 100 Rock Songs (BILLBOARD, 2013)</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="hero-unit">
+    <div class="row booksRow">
+
+    </div>
+  </div>
+
+  <div class="row boxingRow">
+
+    <div class="col-lg-8 col-lg-offset-2">
+
+    </div>
+
+  </div>
+  <footer class="footer">
+    <spn class="glyphicon glyphicon-chevron-up" id="back-to-top"></spn>
+  </footer>
+
+
+  <script id="JS-template" type="text/template">
+    <div class="col-lg-8 col-lg-offset-2">
+      <table class="table">
+        <thead class="thead-dark">
+
+          <tr>
+            {{#header}}
+            <th>{{.}}</th>
+            {{/header}}
+          </tr>
+
+        </thead>
+        <tbody>
+          {{#data}}
+          <tr>
+            {{#.}}
+            <td> {{.}} </td>
+            {{/.}}
+          </tr>
+          <!-- <tr>
+            <td>{{rank}}</td>
+            <td>{{cnt}}</td>
+            <td>{{tt}}</td>
+            <td>{{au}}</td>
+            <td>{{yr}}</td>
+          </tr> -->
+          {{/data}}
+        </tbody>
+
+      </table>
+    </div>
+  </script>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.js"></script>
+
+  <script src="main.js"></script>
+
+
+</body>
+
+</html>
